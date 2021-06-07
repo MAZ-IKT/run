@@ -1,0 +1,52 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 | 
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           | 
+|  \\    /   O peration     | Version:  1.5                                   |
+|   \\  /    A nd           | Web:      http://www.OpenFOAM.org               |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile 
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      transportProperties;
+}
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+
+transportModel  CarreauArrhenius;
+
+
+CarreauArrheniusCoeffs
+{
+	rho	rho [1 -3 0 0 0 0 0] 	780;
+	a	a [1 -1 -1 0 0 0 0] 	1064.0;	// Carreau Parameter a
+	b	b [0 0 1 0 0 0 0] 	0.1203;		// Carreau Parameter b
+	c	c [0 0 0 0 0 0 0] 	0.5493;	// Carreau Parameter c
+	E	E [1 2 -2 0 -1 0 0] 	45733;		// Aktivierungsenergie in J/mol, Einheit in K lassen    
+	T0	T0 [0 0 0 1 0 0 0] 	493.15;		// Bezugstemperatur
+	R	R [1 2 -2 -1 -1 0 0] 	8.314;		// Universelle Gaskonstante in J/(mol K)
+}
+
+
+/*
+transportModel Newtonian;
+nu	nu	[0 2 -1 0 0 0 0] 6;
+*/
+
+// lambda, rho, cp für Energiegleichung
+lambda	lambda	[1 1 -3 -1 0 0 0] 0.157;
+rho	rho	[1 -3 0 0 0 0 0] 780;
+cp	cp	[0 2 -2 -1 0 0 0] 2780;
+
+// Verweilzeit berechnen? 
+residenceTime	no;
+isotherm	no;
+
+
+
+
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
