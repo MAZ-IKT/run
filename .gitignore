@@ -3,10 +3,10 @@
 # ...even if they are in subdirectories
 !*/
 # except ... in subdirectories
-!Flow/n500/0/*
-!Flow/n500/system/*
-!Flow/n500/constant/*
-!Drop/WS0_500_PP-PS-15/0/*
-!Drop/WS0_500_PP-PS-15/system/*
-!Drop/WS0_500_PP-PS-15/constant/*
+!tests/Flow/n500/0/*
+!tests/Flow/n500/system/*
+!tests/Flow/n500/constant/*
+!tests/Drop/WS0_500_PP-PS-15/0/*
+!tests/Drop/WS0_500_PP-PS-15/system/*
+!tests/Drop/WS0_500_PP-PS-15/constant/*
 
