@@ -1,0 +1,35 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 | 
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           | 
+|  \\    /   O peration     | Version:  1.5                                   |
+|   \\  /    A nd           | Web:      http://www.OpenFOAM.org               |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile 
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      transportProperties;
+}
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+    sigma           sigma [ 1 0 -2 0 0 0 0 ] 0.0058; // Escudie, 1985
+
+    phaseFrac       phaseFrac [ 0 0 0 0 0 0 0 ] 0.15;
+
+    deltaV	    deltaV [0 3 0 0 0 0 0] 2.680826e-19;
+
+    zetaB 1.0;
+    Cb 1.0;
+    Sb 1.0;
+
+    zetaC 1.0;
+    Cc 3.7514e-32;
+    k 0.0878;
+    Sc 1.0;
+
+
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //

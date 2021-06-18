@@ -1,0 +1,34 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 | 
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           | 
+|  \\    /   O peration     | Version:  1.5                                   |
+|   \\  /    A nd           | Web:      http://www.OpenFOAM.org               |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile 
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      transportProperties;
+}
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+    rho		  rho [1 -3 0 0 0 0 0] 780.0;	// Schmelzedichte
+//Matrix
+    A1            A1 [1 -1 -1 0 0 0 0] 1064.0;	// Carreau Parameter a in Pa s
+    B1            B1 [0 0 1 0 0 0 0] 0.1203; 	// Carreau Parameter b in s
+    C1            C1 [0 0 0 0 0 0 0] 0.5493;	// Carreau Parameter c in -
+    E1		  E1 [1 2 -2 0 -1 0 0] 	45733.0;		// Aktivierungsenergie in J/mol, Einheit in K lassen    
+    T01	          T01 [0 0 0 1 0 0 0] 	493.15;		// Bezugstemperatur
+//Tropfen
+    A2            A2 [1 -1 -1 0 0 0 0] 3303.0;	// Carreau Parameter a in Pa s
+    B2            B2 [0 0 1 0 0 0 0] 0.1923; 	// Carreau Parameter b in s
+    C2            C2 [0 0 0 0 0 0 0] 0.6855;	// Carreau Parameter c in -
+    E2		  E2 [1 2 -2 0 -1 0 0] 	98239.0;		// Aktivierungsenergie in J/mol, Einheit in K lassen    
+    T02	          T02 [0 0 0 1 0 0 0] 	493.15;		// Bezugstemperatur
+
+    R	          R [1 2 -2 -1 -1 0 0] 	8.314;		// Universelle Gaskonstante in J/(mol K)
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
