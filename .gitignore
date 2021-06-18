@@ -1,0 +1,9 @@
+# Ignore everything
+*
+# ...even if they are in subdirectories
+!*/
+# except ... in subdirectories
+!0
+!system
+!constant
+!.gitignore
