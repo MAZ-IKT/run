@@ -3,9 +3,10 @@
 # ...even if they are in subdirectories
 !*/
 # except ... in subdirectories
-!Flow/*
-!Drop/*
-!0/*
-!system/*
-!constant/*
+!Flow/n500/0/*
+!Flow/n500/system/*
+!Flow/n500/constant/*
+!Drop/WS0_500_PP-PS-15/0/*
+!Drop/WS0_500_PP-PS-15/system/*
+!Drop/WS0_500_PP-PS-15/constant/*
 
