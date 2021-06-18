@@ -32,7 +32,7 @@ boundaryField
     INLET
     {
 	type		inletOutlet;
-	inletValue	uniform 8.5;
+	inletValue	uniform 1000;
     }
     OUTLET
     {
