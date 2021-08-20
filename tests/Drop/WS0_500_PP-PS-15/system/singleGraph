@@ -1,0 +1,67 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  8
+     \\/     M anipulation  |
+-------------------------------------------------------------------------------
+Description
+    Writes graph data for specified fields along a line, specified by start
+    and end points.
+
+\*---------------------------------------------------------------------------*/
+
+//start   (0.02217 0.0005 -0.0005);
+//end     (0.02217 0.002 -0.0005);
+fields  (
+    N01
+    N02
+    N03
+    N04
+    N05
+    N06
+    N07
+    N08
+    N09
+    N10
+    N11
+    N12
+    N13
+    N14
+    N15
+    N16
+    N17
+    N18
+    N19
+    N20);
+
+// Sampling and I/O settings
+#includeEtc "caseDicts/postProcessing/graphs/sampleDict.cfg"
+
+// Override settings here, e.g.
+
+setFormat   raw;
+surfaceFormat raw;
+interpolationScheme cell; \\ cellPoint;
+/*
+setConfig
+{
+    type lineUniform; // lineCell, lineCellFace, lineUniform
+    axis distance;        //x, y, z, xyz, distance
+    nPoints 10;
+}
+*/
+
+surfaces
+(
+    OUTLET
+    {
+        type        patch;
+        patches     (".*OUTLET.*");
+    }
+);
+
+// Must be last entry
+#includeEtc "caseDicts/postProcessing/graphs/graph.cfg"
+
+// ************************************************************************* //

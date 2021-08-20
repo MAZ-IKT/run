@@ -1,0 +1,54 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  8
+     \\/     M anipulation  |
+-------------------------------------------------------------------------------
+Description
+    Writes out surface files with interpolated field data in VTK format, e.g.
+    cutting planes, iso-surfaces and patch boundary surfaces.
+
+    This file includes a selection of example surfaces, each of which the user
+    should configure and/or remove.
+
+\*---------------------------------------------------------------------------*/
+
+#includeEtc "caseDicts/postProcessing/visualization/surfaces.cfg"
+
+surfaceFormat raw;
+interpolationScheme cellPoint;
+
+fields (
+    N01
+    N02
+    N03
+    N04
+    N05
+    N06
+    N07
+    N08
+    N09
+    N10
+    N11
+    N12
+    N13
+    N14
+    N15
+    N16
+    N17
+    N18
+    N19
+    N20
+);
+
+surfaces
+(
+    zNormal
+    {
+        $patchSurface;
+        patches     (".*OUTLET.*");
+    }
+);
+
+// ************************************************************************* //
