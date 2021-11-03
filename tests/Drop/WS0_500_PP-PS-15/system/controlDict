@@ -45,6 +45,11 @@ timePrecision   6;
 
 runTimeModifiable true;
 
+functions
+{
+    #includeFunc  surfaces //singleGraph
+};
+
 libs
 (
     "libCarreauArrhenius.so"
